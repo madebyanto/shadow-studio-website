@@ -1,0 +1,341 @@
+
+
+/* Variabili CSS per i colori */
+:root {
+    --colore-primario: #000127;
+    --colore-secondario: #3D3FAE;
+    --colore-sfondo: #000127;
+}
+
+/* Reset di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--colore-secondario);
+    background-color: var(--colore-sfondo);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigazione */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color:rgba(0, 1, 39, 0.95);
+    padding: 1.5rem 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(61, 63, 174, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav li {
+    display: inline;
+}
+.logo {
+    position: fixed !important;
+    top: 1rem !important;
+    left: 1.5rem !important;
+    width: 50px !important;
+    height: auto !important;
+    z-index: 1001 !important;
+}
+
+/* Ogni sezione occupa tutto lo schermo */
+header,
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+    text-align: center;
+}
+
+/* Header con benvenuto freddo e sinistro */
+header {
+    background-color: var(--colore-sfondo);
+    color: #ffffff;
+    position: relative;
+}
+
+header h1 {
+    font-size: 4.5rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 40px rgba(61, 63, 174, 0.7);
+    animation: flicker 4s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { 
+        opacity: 1; 
+        text-shadow: 0 0 40px rgba(61, 63, 174, 0.7);
+    }
+    50% { 
+        opacity: 0.93; 
+        text-shadow: 0 0 25px rgba(61, 63, 174, 0.5);
+    }
+}
+
+header p {
+    font-size: 1.4rem;
+    color: var(--colore-secondario);
+    font-style: italic;
+    max-width: 900px;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.subtitle {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+/* Titoli sezioni */
+h2 {
+    color: #ffffff;
+    font-size: 3.5rem;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    text-shadow: 0 0 30px rgba(61, 63, 174, 0.6);
+}
+
+/* Sezione News */
+#news {
+    background-color: var(--colore-sfondo);
+}
+
+.news-item {
+    background-color: rgba(61, 63, 174, 0.08);
+    border: 1px solid var(--colore-secondario);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    width: 100%;
+    transition: all 0.4s ease;
+    text-align: left;
+}
+
+.news-item:hover {
+    background-color: rgba(61, 63, 174, 0.15);
+    border-color: #ffffff;
+    box-shadow: 0 0 30px rgba(61, 63, 174, 0.4);
+    transform: translateY(-5px);
+}
+
+.news-item h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.news-date {
+    color: var(--colore-secondario);
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.85;
+    font-weight: 400;
+}
+
+.news-item p {
+    color: var(--colore-secondario);
+    line-height: 1.9;
+    font-weight: 300;
+}
+
+/* Sezione About Us */
+#about {
+    background-color: var(--colore-sfondo);
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+#about p {
+    margin-bottom: 2.5rem;
+    max-width: 900px;
+    text-align: center;
+    color: var(--colore-secondario);
+    font-size: 1.15rem;
+    line-height: 2.2;
+    font-weight: 300;
+}
+
+/* Sezione Supporto */
+#support {
+    background-color: var(--colore-sfondo);
+}
+
+.support-info {
+    max-width: 900px;
+    width: 100%;
+}
+
+.support-info p {
+    color: var(--colore-secondario);
+    margin-bottom: 2rem;
+    font-size: 1.15rem;
+    font-weight: 300;
+    line-height: 1.9;
+}
+
+.contact-methods {
+    background-color: rgba(61, 63, 174, 0.1);
+    border: 1px solid var(--colore-secondario);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin: 2.5rem 0;
+}
+
+.contact-methods p {
+    margin-bottom: 1.3rem;
+    color: var(--colore-secondario);
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.contact-methods strong {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.support-note {
+    font-style: italic;
+    opacity: 0.8;
+    margin-top: 2.5rem;
+    font-weight: 300;
+}
+
+/* Footer */
+footer {
+    background-color: var(--colore-sfondo);
+    color: var(--colore-secondario);
+    padding: 2.5rem;
+    text-align: center;
+    border-top: 1px solid var(--colore-secondario);
+    font-weight: 300;
+}
+
+/* Pulsanti navigazione */
+.button-v {
+    position: relative;
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    border: 2px solid #3D3FAE;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
+    text-decoration: none;
+    z-index: 1;
+}
+
+.button-v::before {
+    content: "";
+    position: absolute;
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    width: 200%;
+    height: 200%;
+    background: #3D3FAE;
+    border-radius: 50%;
+    transition: transform 0.6s ease;
+    z-index: 0;
+}
+
+.button-v:hover::before {
+    transform: translateX(-50%) scale(1);
+}
+
+.button-v span {
+    position: relative;
+    z-index: 2;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.button-v:hover span {
+    color: white;
+}
+
+/* Stato pagina attiva (colore più scuro) */
+.button-v.active {
+    background: #35379d; /* blu più scuro */
+    border-color: #35379d;
+}
+
+.button-v.active::before {
+    display: none; /* disattiva l’animazione per non coprire il colore */
+}
+
+.button-v.active span {
+    color: white;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.8rem;
+        letter-spacing: 2px;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+    
+    header p {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .button-v {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .logo {
+        width: 100px;
+        border-radius: 8px;
+}
+}
