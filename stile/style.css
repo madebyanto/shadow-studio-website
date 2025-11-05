@@ -49,14 +49,16 @@ nav ul {
 nav li {
     display: inline;
 }
+
 .logo {
     position: fixed !important;
     top: 1rem !important;
     left: 1.5rem !important;
-    width: 50px !important;
+    width: clamp(40px, 5vw, 60px) !important;
     height: auto !important;
     z-index: 1001 !important;
 }
+
 
 /* Ogni sezione occupa tutto lo schermo */
 header,
@@ -335,7 +337,7 @@ footer {
     }
 
     .logo {
-        width: 100px;
+        width: 50px;
         border-radius: 8px;
 }
 }
