@@ -338,6 +338,36 @@ footer {
 
     .logo {
         width: 50px;
-        border-radius: 8px;
+        border-radius: 90px;
 }
+}
+
+.chi-siamo-hp {
+  background: #fff;
+  color: #001f3f; /* blu notte */
+  border: 2px solid #001f3f;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 rgba(0, 229, 255, 0); /* invisibile inizialmente */
+}
+
+/* Al passaggio del mouse */
+.chi-siamo-hp:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.5); /* bagliore azzurro neon soft */
+  border-color: #00e5ff;
+}
+
+/* Quando viene cliccato */
+.chi-siamo-hp:active {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.7);
+}
+
+.img.film-hp {
+  border-radius: 50%;
 }
