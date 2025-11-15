@@ -1,5 +1,3 @@
-
-
 /* Variabili CSS per i colori */
 :root {
     --colore-primario: #000127;
@@ -24,6 +22,17 @@ body {
     background-color: var(--colore-sfondo);
     line-height: 1.6;
     overflow-x: hidden;
+    text-align: center; /* CENTRATURA GLOBALE */
+}
+
+section, header {
+    text-align: center; /* CENTRATURA GLOBALE */
+}
+
+/* Centra tutte le immagini */
+img {
+    display: block;
+    margin: 0 auto;
 }
 
 /* Navigazione */
@@ -31,7 +40,7 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color:rgba(0, 1, 39, 0.95);
+    background-color: rgba(0, 1, 39, 0.95);
     padding: 1.5rem 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(61, 63, 174, 0.3);
@@ -59,7 +68,6 @@ nav li {
     z-index: 1001 !important;
 }
 
-
 /* Ogni sezione occupa tutto lo schermo */
 header,
 section {
@@ -72,7 +80,7 @@ section {
     text-align: center;
 }
 
-/* Header con benvenuto freddo e sinistro */
+/* Header */
 header {
     background-color: var(--colore-sfondo);
     color: #ffffff;
@@ -90,12 +98,12 @@ header h1 {
 }
 
 @keyframes flicker {
-    0%, 100% { 
-        opacity: 1; 
+    0%, 100% {
+        opacity: 1;
         text-shadow: 0 0 40px rgba(61, 63, 174, 0.7);
     }
-    50% { 
-        opacity: 0.93; 
+    50% {
+        opacity: 0.93;
         text-shadow: 0 0 25px rgba(61, 63, 174, 0.5);
     }
 }
@@ -141,7 +149,7 @@ h2 {
     max-width: 900px;
     width: 100%;
     transition: all 0.4s ease;
-    text-align: left;
+    text-align: center !important; /* CENTRATURA */
 }
 
 .news-item:hover {
@@ -173,7 +181,7 @@ h2 {
     font-weight: 300;
 }
 
-/* Sezione About Us */
+/* About */
 #about {
     background-color: var(--colore-sfondo);
 }
@@ -192,7 +200,7 @@ h2 {
     font-weight: 300;
 }
 
-/* Sezione Supporto */
+/* Supporto */
 #support {
     background-color: var(--colore-sfondo);
 }
@@ -295,20 +303,19 @@ footer {
     color: white;
 }
 
-/* Stato pagina attiva (colore più scuro) */
+/* Stato pagina attiva */
 .button-v.active {
-    background: #35379d; /* blu più scuro */
+    background: #35379d;
     border-color: #35379d;
 }
 
 .button-v.active::before {
-    display: none; /* disattiva l’animazione per non coprire il colore */
+    display: none;
 }
 
 .button-v.active span {
     color: white;
 }
-
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -339,12 +346,13 @@ footer {
     .logo {
         width: 50px;
         border-radius: 90px;
-}
+    }
 }
 
+/* Pulsante chi siamo */
 .chi-siamo-hp {
   background: #fff;
-  color: #001f3f; /* blu notte */
+  color: #001f3f;
   border: 2px solid #001f3f;
   border-radius: 9999px;
   padding: 12px 28px;
@@ -352,22 +360,23 @@ footer {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 0 0 rgba(0, 229, 255, 0); /* invisibile inizialmente */
+  box-shadow: 0 0 0 rgba(0, 229, 255, 0);
 }
 
-/* Al passaggio del mouse */
 .chi-siamo-hp:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 12px rgba(0, 229, 255, 0.5); /* bagliore azzurro neon soft */
+  box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
   border-color: #00e5ff;
 }
 
-/* Quando viene cliccato */
 .chi-siamo-hp:active {
   transform: scale(1.08);
   box-shadow: 0 0 18px rgba(0, 229, 255, 0.7);
 }
 
+/* Immagine home */
 .img.film-hp {
+  display: block;
+  margin: 0 auto;
   border-radius: 50%;
 }
